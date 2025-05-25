@@ -68,6 +68,16 @@ ros2 run image_view image_view --ros-args -r image:=/webcam/image_raw
 * C++
 
 
+## Result
+
+The following image shows the color detection and transformation process:
+
+- **Left:** Original webcam image
+- **Center:** Detected red regions (highlighted in red)
+- **Right:** Red regions replaced with blue
+
+![Result Example](realtime_image_pro.png)
+
 ## Notes
 
 * The Python package name is based on a favorite fruit (`orange`).
