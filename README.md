@@ -31,7 +31,7 @@ This project demonstrates a ROS 2-based image processing pipeline using two cust
 1. Clone this repository into your ROS 2 workspace:
    ```bash
    cd ~/ros2_ws/src
-   git clone <your-repo-url>
+   git clone https://github.com/NatnaelB7/realtime-image-processing.git
    ```
 
 
