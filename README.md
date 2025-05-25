@@ -52,6 +52,12 @@ Use the provided launch file to start both nodes:
 ros2 launch orange webcam_color_filter.launch.py
 ```
 
+To directly view the published webcam stream:
+
+```bash
+ros2 run image_view image_view --ros-args -r image:=/webcam/image_raw
+```
+
 
 ## Dependencies
 
