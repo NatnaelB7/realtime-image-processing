@@ -11,7 +11,7 @@ This project demonstrates a ROS 2-based image processing pipeline using two cust
 
 - Captures live webcam feed using OpenCV.
 - Overlays the current system time (in seconds) on each frame.
-- Publishes images to the topic `/webcam/image_raw`.
+- Publishes images using the Best_Effort QoS to the topic `/webcam/image_raw`.
 
 ### 2. `red` (C++)
 **Executable:** `color_filter`
