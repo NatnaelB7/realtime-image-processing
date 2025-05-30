@@ -1,5 +1,6 @@
 import rclpy
 from rclpy.node import Node
+from rclpy.qos import QoSProfile, QoSReliabilityPolicy
 from sensor_msgs.msg import Image
 from cv_bridge import CvBridge
 import cv2
@@ -8,7 +9,8 @@ import time
 class WebcamDriver(Node):
     def __init__(self):
         super().__init__('webcam_driver')
-        self.publisher_ = self.create_publisher(Image, '/webcam/image_raw', 10)
+        qos_profile = QoSProfile(depth=10, reliability=QoSReliabilityPolicy.BEST_EFFORT)
+        self.publisher_ = self.create_publisher(Image, '/webcam/image_raw', qos_profile)
         self.cap = cv2.VideoCapture(0)
         self.br = CvBridge()
         self.timer = self.create_timer(0.05, self.timer_callback)
